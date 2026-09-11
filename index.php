@@ -42,7 +42,7 @@ $ejesTematicos = [
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Congreso Internacional de Tecnología e Innovación · CITIC 2026</title>
+<title>Congreso Internacional de Tecnología e Innovación · CITIC 2027</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

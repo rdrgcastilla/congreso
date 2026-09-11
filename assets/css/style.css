@@ -1,0 +1,319 @@
+/* ============================================================
+   Congreso Internacional de Tecnología e Innovación
+   Estilos — misma paleta institucional usada en la Sesión 4
+   ============================================================ */
+
+:root {
+  --azul: #001f5f;
+  --azul-2: #004eea;
+  --azul-2-claro: #4d8cff;
+  --naranja: #ff6a3d;
+  --naranja-suave: #fff1eb;
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --text: #0b1b3f;
+  --text-muted: #5c6b8a;
+  --border: #e4eaf7;
+  --radius: 18px;
+  --shadow: 0 10px 30px -12px rgba(0, 31, 95, 0.18);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1, h2, h3, h4, .display-font {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+a { text-decoration: none; }
+
+/* ---------- Navbar ---------- */
+.navbar-congreso {
+  background: rgba(247, 249, 252, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar-brand-congreso {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: var(--azul) !important;
+  font-size: 1.15rem;
+}
+
+.navbar-brand-congreso .badge-acento {
+  background: var(--naranja);
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.7rem;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+}
+
+.nav-link-congreso {
+  color: var(--text-muted) !important;
+  font-weight: 500;
+  font-size: 0.93rem;
+}
+
+.nav-link-congreso:hover { color: var(--azul) !important; }
+
+.btn-naranja {
+  background: var(--naranja);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.55rem 1.3rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-naranja:hover {
+  background: #ef5a2c;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -6px rgba(255, 106, 61, 0.55);
+}
+.btn-naranja:disabled { background: #c9cede; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.btn-azul-outline {
+  border: 1.5px solid var(--azul-2);
+  color: var(--azul-2);
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.5rem 1.2rem;
+  background: transparent;
+}
+.btn-azul-outline:hover { background: var(--azul-2); color: #fff; }
+
+/* ---------- Hero ---------- */
+.hero-congreso {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0, 78, 234, 0.35), transparent 45%),
+    radial-gradient(circle at 85% 0%, rgba(255, 106, 61, 0.3), transparent 40%),
+    var(--azul);
+  color: #eaf1ff;
+  padding: 5.5rem 0 4.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #cfe0ff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: clamp(2.1rem, 4.5vw, 3.4rem);
+  line-height: 1.08;
+  margin: 1.1rem 0 1rem;
+}
+
+.hero-title .acento { color: var(--naranja); }
+
+.hero-sub { color: #a9bde3; font-size: 1.1rem; max-width: 620px; }
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.6rem;
+  margin-top: 1.8rem;
+  font-size: 0.92rem;
+  color: #cfe0ff;
+}
+.hero-meta span { display: flex; align-items: center; gap: 0.45rem; }
+.hero-meta i { color: var(--naranja); }
+
+/* ---------- Stat pills (cupos) ---------- */
+.stat-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.5rem;
+  box-shadow: var(--shadow);
+  height: 100%;
+}
+.stat-card .stat-value {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--azul);
+  line-height: 1;
+}
+.stat-card.acento .stat-value { color: var(--naranja); }
+.stat-card .stat-label { color: var(--text-muted); font-size: 0.88rem; margin-top: 0.4rem; }
+
+.stat-card-float {
+  margin-top: -4.2rem;
+  position: relative;
+  z-index: 5;
+}
+
+/* ---------- Section headers ---------- */
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--azul-2);
+}
+.section-title { font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0.5rem 0 0.8rem; color: var(--azul); }
+.section-sub { color: var(--text-muted); max-width: 640px; }
+
+/* ---------- Highlight / feature cards ---------- */
+.feature-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.7rem;
+  height: 100%;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.feature-icon {
+  width: 46px; height: 46px;
+  border-radius: 12px;
+  background: var(--naranja-suave);
+  color: var(--naranja);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Ejes temáticos chips ---------- */
+.eje-chip {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+  height: 100%;
+  font-weight: 600;
+  color: var(--azul);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.eje-chip i { color: var(--azul-2); font-size: 1.15rem; }
+
+/* ---------- Formulario ---------- */
+.form-section {
+  background: var(--azul);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  color: #eaf1ff;
+}
+.form-section .form-control, .form-section .form-select {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #eaf1ff;
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem;
+}
+.form-section .form-control::placeholder { color: #8fa3d0; }
+.form-section .form-control:focus, .form-section .form-select:focus {
+  background: rgba(255,255,255,0.09);
+  border-color: var(--naranja);
+  box-shadow: 0 0 0 0.2rem rgba(255, 106, 61, 0.25);
+  color: #fff;
+}
+.form-section label { color: #cfe0ff; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; }
+.form-section .form-select option { color: #0b1b3f; }
+
+/* ---------- Footer ---------- */
+.footer-congreso {
+  background: #04123b;
+  color: #93a6d6;
+  padding: 2.5rem 0;
+  font-size: 0.9rem;
+}
+.footer-congreso a { color: #cfe0ff; }
+.footer-congreso a:hover { color: var(--naranja); }
+
+/* ============================================================
+   Panel de administración
+   ============================================================ */
+.admin-shell { min-height: 100vh; background: var(--bg); }
+
+.admin-topbar {
+  background: var(--azul);
+  color: #eaf1ff;
+  padding: 1rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.admin-topbar .brand { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+.admin-topbar .brand .acento { color: var(--naranja); }
+
+.kpi-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  box-shadow: var(--shadow);
+  height: 100%;
+}
+.kpi-card .kpi-icon {
+  width: 42px; height: 42px; border-radius: 11px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 0.8rem; font-size: 1.15rem;
+}
+.kpi-icon.blue { background: #e7edff; color: var(--azul-2); }
+.kpi-icon.orange { background: var(--naranja-suave); color: var(--naranja); }
+.kpi-icon.navy { background: #e3e9fb; color: var(--azul); }
+.kpi-value { font-family: 'Space Grotesk', sans-serif; font-size: 1.9rem; font-weight: 700; color: var(--azul); }
+.kpi-label { color: var(--text-muted); font-size: 0.85rem; }
+
+.admin-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.table-inscritos thead th {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--border);
+  font-weight: 700;
+}
+.table-inscritos td { vertical-align: middle; font-size: 0.92rem; }
+.badge-eje {
+  background: #e7edff;
+  color: var(--azul-2);
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.32rem 0.7rem;
+  font-size: 0.76rem;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.login-card {
+  max-width: 400px;
+  margin: 8vh auto;
+  background: var(--card);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 2.4rem 2.2rem;
+}
